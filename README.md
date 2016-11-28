@@ -25,3 +25,11 @@ Once on the main page,
 	* Get text orientation - this will return the orientation of the text on the image.
 		for example - if we get 180 - this means the text is upside down
 					  if we get 0   - this means the text is in the proper position
+
+## Walkthrough of how Engine works!
+
+1. Once in the app folder run - python executable.py.
+	* A message will come up to open a web browser and go to url http://http://127.0.0.1:5000/
+	  ![Welcome Message](https://github.com/ralle123/ocr/blob/master/images/Capture1.PNG)
+2. When address is reached the welcome page will come up.
+		![Welcome Page](https://github.com/ralle123/ocr/blob/master/images/Capture2.PNG)
