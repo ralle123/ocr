@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>OCR Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--<link href="{{ url_for('static', filename='callout.css') }}" />-->
+    <!--<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='callout.css') }}">-->
+
+    <link rel="stylesheet" type="text/css"
+    href="{{ url_for('static', filename='callout.css') }}">
+    <!--<link rel="stylesheet" href="/static/css/callout.css"
+   type="text/css" media="screen" charset="utf-8" />-->
+
+  </head>
+  <body>
+    <div class="bs-callout bs-callout-default">
+    <form action="/submissionsuccess" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <div class="row">
+          <label for="exampleInputFile">File input</label>
+        </div>
+        <!--<input type="file" id="file1">{{button_title['title1']}}-->
+
+        
+      <button type="button"  class="btn btn-primary">
+        <input type="file" name="file1">
+        {{button_title['title1']}}
+      </button>
+      <p class="help-block">Select a file to upload and send to the OCR engine.</p>
+    </div>
+      <br>
+      <br>
+      <br>
+      <button type="submit" name="submit" value="Convert to text" class="btn btn-default"> {{button_title['title2']}} </button>
+      <br>
+      <br>
+      <button type="submit" name="submit" value="Get orientation" class="btn btn-default"> {{button_title['title3']}} </button>
+      <br>
+      <br>
+    </form>
+    </div>
+  </body>
+</html>
