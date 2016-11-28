@@ -5,27 +5,6 @@ This OCR server runs on Tesseract and flask
 [link to Tesseract!](https://github.com/tesseract-ocr/tesseract)
 
 
-Once the two previous dependencies have been installed application can simple be run the following line:
-'''
- python executable.py
-'''
- You will get the message below, this means a webserver is running. All you have to do now if open a web browser and got to
- URl http://http://127.0.0.1:5000/
-
-* Restarting with stat
-* Debugger is active!
-* Debugger pin code: 228-832-533
-* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-
-
-Once on the main page,
-* Select a file from your machine to process
-* Once file has been selected, you have two options
-	* Convert to text - this will convert to text the content of the image. Keep in mind we are using English language at this time
-	* Get text orientation - this will return the orientation of the text on the image.
-		for example - if we get 180 - this means the text is upside down
-					  if we get 0   - this means the text is in the proper position
-
 ## Walkthrough of how Engine works!
 
 1. Once in the app folder run - python executable.py.
@@ -33,3 +12,14 @@ Once on the main page,
 	  ![Welcome Message](https://github.com/ralle123/ocr/blob/master/images/Capture1.PNG)
 2. When address is reached the welcome page will come up.
 		![Welcome Page](https://github.com/ralle123/ocr/blob/master/images/Capture2.PNG)
+3. Once Image has been selected we can get the text from the image or get the orientation from the text.
+		![Welcome Page](https://github.com/ralle123/ocr/blob/master/images/Capture3.PNG)
+4. This is an example of what the text conversion option looks like. English language is selected in option.
+		![Welcome Page](https://github.com/ralle123/ocr/blob/master/images/Capture4.PNG)
+5. This is an example of what the text orientation looks like.
+		![Welcome Page](https://github.com/ralle123/ocr/blob/master/images/Capture5.PNG)
+
+		| Result 	| Explanation                    	|
+		|--------	|--------------------------------	|
+		| 0      	| Image is in the right position 	|
+		| 180    	| Image is upside down           	|   
