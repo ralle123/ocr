@@ -3,26 +3,20 @@
     <title>OCR Application</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!--<link href="{{ url_for('static', filename='callout.css') }}" />-->
-    <!--<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='callout.css') }}">-->
-
     <link rel="stylesheet" type="text/css"
     href="{{ url_for('static', filename='callout.css') }}">
-    <!--<link rel="stylesheet" href="/static/css/callout.css"
-   type="text/css" media="screen" charset="utf-8" />-->
-
   </head>
   <body>
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
     <div class="bs-callout bs-callout-default">
+      <h4>Welcome to the OCR server</h4>
+      <br>
+      <br>
     <form action="/submissionsuccess" method="POST" enctype="multipart/form-data">
       <div class="form-group">
-        <div class="row">
-          <label for="exampleInputFile">File input</label>
-        </div>
-        <!--<input type="file" id="file1">{{button_title['title1']}}-->
-
-        
-      <button type="button"  class="btn btn-primary">
+      <button type="button"  class="btn btn-primary btn-block">
         <input type="file" name="file1">
         {{button_title['title1']}}
       </button>
@@ -31,13 +25,14 @@
       <br>
       <br>
       <br>
-      <button type="submit" name="submit" value="Convert to text" class="btn btn-default"> {{button_title['title2']}} </button>
-      <br>
-      <br>
-      <button type="submit" name="submit" value="Get orientation" class="btn btn-default"> {{button_title['title3']}} </button>
-      <br>
-      <br>
+      <div class="well center-block" style="max-width:400px">
+      <button type="submit" name="submit" value="Convert to text" class="btn btn-success btn-lg btn-block"> {{button_title['title2']}} </button>
+      <button type="submit" name="submit" value="Get orientation" class="btn btn-info btn-lg btn-block"> {{button_title['title3']}} </button>
+    </div>
     </form>
+    </div>
+    </div>
+    <div class="col-md-3"></div>
     </div>
   </body>
 </html>

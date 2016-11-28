@@ -22,9 +22,10 @@ def get_orientation(linktoimage):
     degrees = orientpattre.findall(orientationdata)
     degrees = degrees[0]
     #return degrees
-    button_title = {'title1': 'Upload File', 'title2':'Submit', 'titlex':'Go Back'}
+    header='Text Orientation'
+    button_title = {'title1': 'Upload File', 'titlex':'Go Back to main page'}
     return render_template('submissionsuccess.html',
-                           button_title=button_title,info=degrees)
+                           button_title=button_title,title=header,info=degrees)
                     
 
 @app.route('/submissionsuccess',methods=['GET','POST'])
@@ -41,8 +42,9 @@ def success():
     if request.method == 'POST':
         if request.form['submit'] == 'Convert to text':
             text1=subprocess.check_output(['tesseract',destination1,"stdout","-l","eng","-psm","4"])
-            button_title={'title1': 'Upload File', 'title2':'Submit', 'titlex':'Go Back'}
-            return render_template('submissionsuccess.html',button_title=button_title, info = text1)
+            header='Text Conversion'
+            button_title={'title1': 'Upload File', 'title2':'Submit', 'titlex':'Go Back to main page'}
+            return render_template('submissionsuccess.html',button_title=button_title,title=header, info = text1)
         elif request.form['submit'] == 'Get orientation':
             orientation1=get_orientation(destination1)
             return orientation1            
