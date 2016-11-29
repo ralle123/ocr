@@ -1,7 +1,9 @@
 #Simple OCR server
 
 This OCR server runs on Tesseract and flask
+
 [link to Flask!](http://flask.pocoo.org/)
+
 [link to Tesseract!](https://github.com/tesseract-ocr/tesseract)
 
 
